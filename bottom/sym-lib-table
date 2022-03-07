@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "blackpill")(type "Legacy")(uri "/Users/tompi/src/vonreg/libraries/Kicad-STM32/Symbols/YAAJ_WeAct_BlackPill_Part_Like.lib")(options "")(descr ""))
+)
