@@ -1,0 +1,83 @@
+
+(rules PCB vonreg_bottom
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (app.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.2)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    "unconnected-(BlackPill1-Pad40)" K1 GND K2 3V3 K3 "unconnected-(BlackPill1-Pad37)" K4
+    "unconnected-(BlackPill1-Pad36)" "unconnected-(BlackPill1-Pad5)" K13 "unconnected-(BlackPill1-Pad6)" K14 "unconnected-(BlackPill1-Pad7)" K15 "unconnected-(BlackPill1-Pad8)"
+    T1 "unconnected-(BlackPill1-Pad9)" T2 K5 T3 K6 "unconnected-(BlackPill1-Pad29)" K7
+    TX1 K8 "unconnected-(BlackPill1-Pad27)" K9 "unconnected-(BlackPill1-Pad26)" K10 "unconnected-(BlackPill1-Pad25)" K11
+    "unconnected-(BlackPill1-Pad24)" K12 "unconnected-(BlackPill1-Pad23)" "unconnected-(BlackPill1-Pad18)" "unconnected-(BlackPill1-Pad22)" "unconnected-(BlackPill1-Pad21)" "unconnected-(PinsBottomB1-Pad6)" "unconnected-(PinsBottomB1-Pad7)"
+    "unconnected-(PinsBottomB1-Pad8)" "unconnected-(PinsBottomB1-Pad9)" "unconnected-(BlackPill_reversed1-Pad40)" "unconnected-(BlackPill_reversed1-Pad37)" "unconnected-(BlackPill_reversed1-Pad36)" "unconnected-(BlackPill_reversed1-Pad5)" "unconnected-(BlackPill_reversed1-Pad6)" "unconnected-(BlackPill_reversed1-Pad7)"
+    "unconnected-(BlackPill_reversed1-Pad8)" "unconnected-(BlackPill_reversed1-Pad9)" "unconnected-(BlackPill_reversed1-Pad29)" "unconnected-(BlackPill_reversed1-Pad27)" "unconnected-(BlackPill_reversed1-Pad26)" "unconnected-(BlackPill_reversed1-Pad25)" "unconnected-(BlackPill_reversed1-Pad24)" "unconnected-(BlackPill_reversed1-Pad23)"
+    "unconnected-(BlackPill_reversed1-Pad18)" "unconnected-(BlackPill_reversed1-Pad22)" "unconnected-(BlackPill_reversed1-Pad21)" "unconnected-(J1-PadS)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

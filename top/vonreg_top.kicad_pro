@@ -379,7 +379,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "specctra_dsn": "",
+      "specctra_dsn": "vonreg_top.dsn",
       "step": "",
       "vrml": ""
     },
