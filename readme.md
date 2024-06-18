@@ -1,8 +1,13 @@
 # The Vonreg keyboard
 ---------------------
 
+![Vonreg](vonreg.png)
+
 The Vonreg is an attempt at exploiting 3 dimensions with just pcb.
 (vertical thumb cluster)
+
+N.B: Although this board works fine, its a bit difficult to use,
+since it will slide around, due to only 2 edges touching the table.
 
 To build it you need to order pcbs, check out the releases.
 
